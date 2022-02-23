@@ -1,1 +1,1 @@
-web: gunicorn notesapp.wsgi
+web: gunicorn NotesApp.wsgi
