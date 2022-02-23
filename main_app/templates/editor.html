@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <nav class="navbar is-info">
+        <div class="navbar-brand">
+            <a href="{% url 'editor' %}" class="navbar-item">Notes</a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                {% if user.is_authenticated %}
+                <a href="{% url 'editor' %}?docid=0" class="navbar-item">New document</a>
+                <a href="{% url 'logout' %}" class="navbar-item">Log Out</a>
+                {% else %}
+                <a href="{% url 'login' %}" class="navbar-item">Log In </a>
+                <a href="{% url 'signup' %}" class="navbar-item">Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="columns">
+            
+
+            <div class="column is-10">
+                <form method="post" action="{% url 'editor' %}">
+                    {% csrf_token %}
+
+                    <input type="hidden" name="docid" value="{{ docid }}">
+
+                    <div class="field">
+                        <label class="label">
+                            Title
+                        </label>
+
+                        <div class="control">
+                            <input type="text" class="input" name="title" placeholder="Title" {% if document %}
+                                value="{{ document.title }}" {% endif %}>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Content</label>
+
+                        <div class="control">
+                            <textarea class="textarea" name="content"
+                                placeholder="Content">{% if document %}{{ document.content }}{% endif %}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-primary">Save</button>
+                        </div>
+                        {% if document %}
+                        <div class="control">
+                            <a href="{% url 'delete_document' document.id %}" class="button is-danger">Delete</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+            <div class="column is-2">
+                <aside class="menu">
+                    <p class="menu-label">Documents</p>
+
+                    <ul class="menu-list">
+                        {% for doc in documents %}
+                        <li>
+                            <a href="{% url 'editor' %}?docid={{ doc.id }}">{{ doc.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <div class="navbar is-info">
+        All Rights Reserved, &copy; 2022 Notes-App &nbsp;
+    </div>
+</body>
+
+</html>
