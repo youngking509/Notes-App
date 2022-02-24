@@ -1,24 +1,49 @@
 * {
     box-sizing: border-box;
     margin: 0;
+
 }
 
 
 body {
-    background-color:gray;
+    /* background-color:gray; */
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     flex-direction: column;
+    padding: 5px;
+    background-image: url("../img/pexels-photo-636237.jpeg");
+    /* background-image: url("../img/pexels-photo-1629212.jpeg"); */
 }
 
 main {
     flex-grow: 1;
 }
 
-footer {
-    padding-top: 0;
-    text-align: right;
-    position: absolute; 
-    bottom: 0;
-    width: 100%;
+
+.section {
+    max-width: 500px;
+    margin: auto;
+    min-height: 86vh;
+}
+
+.footer {
+    color: aquamarine;
+    /* padding-top: 0; */
+    /* text-align: right; */
+    /* position: absolute;  */
+    /* bottom: 0; */
+    /* width: 100%; */
+}
+
+
+.menu-label {
+    color: black;
+    font-weight: bold;
+    font-size:small;
+}
+
+
+.label {
+    color: black;
+    font-weight: bold;
 }
