@@ -43,7 +43,7 @@ The compApp was created for people who wants a note keeper to make their lives e
 ## <a name="nextsteps"></a>Project Next Steps
 * Redirect to a new view page.
 * Users can add pictures to their notes
-* Users can download their notes a pdf file
+* Users can download their notes as pdf file
 
 
 ## <a name="deployment"></a>Deployed Link
