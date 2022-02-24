@@ -41,10 +41,10 @@ The compApp was created for people who wants a note keeper to make their lives e
 
 
 ## <a name="nextsteps"></a>Project Next Steps
-* Users can change the theme.
-* Users can leave comments on parks
-* Park model will be nested in city model
-* Users will be able to login to edit or post
+* Redirect to a new view page.
+* Users can add pictures to their notes
+* Users can download their notes a pdf file
+
 
 ## <a name="deployment"></a>Deployed Link
 [Heroku](https://notes-app-king.herokuapp.com/)
