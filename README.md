@@ -31,8 +31,6 @@ The compApp was created for people who wants a note keeper to make their lives e
 ## Whiteboard Images
 *Original Whiteboard sketch
 
-![Image](Images/wireframe1.PNG)
-![Image](Images/wireframe2.JPG)
 
 ## Trello Planning
 * Link to Trello: https://trello.com/b/BFhzzZlj/note-taking
