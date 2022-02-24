@@ -2,9 +2,8 @@
 
 
 #### A full crud web app designed to write and keep notes.
-<img src="./Images/comp1.png" alt="Home Page Welcome Screen"/>
-<img src="./Images/comp2.png" alt="City Page"/>
-<img src="./Images/comp3.png" alt="Park Page"/>
+![Screen Shot 2022-02-24 at 6 11 37 AM](https://user-images.githubusercontent.com/94661081/155540449-d1094a35-2d7d-463c-86e8-842a2fa110d4.png)
+
 
 ## Description
 The compApp was created for people who wants a note keeper to make their lives easy and be more productive.
