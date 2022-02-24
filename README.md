@@ -21,7 +21,8 @@ The compApp was created for people who wants a note keeper to make their lives e
 * HTML5
 * CSS3
 * Procfile
-* 
+* Django
+* Materialize
 
 
 
