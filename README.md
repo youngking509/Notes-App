@@ -44,6 +44,7 @@ The compApp was created for people who wants a note keeper to make their lives e
 * Redirect to a new view page.
 * Users can add pictures to their notes
 * Users can download their notes as pdf file
+* Add a date/time created
 
 
 ## <a name="deployment"></a>Deployed Link
